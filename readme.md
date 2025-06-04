@@ -1,0 +1,4 @@
+## Disease-specific Food Knowledge Graph
+This repository consists of code and data to construct Disease-specific Food Knowledge Graph (DFKG). Specifically, the knowledge graph consists of reasoning for ingredinents in the context of diabetes that tells the reasons to have or avoid this particular ingredient. The KG also has additional components such as cooking taxonomy which helps in cooking method subsitutions, glycemic index of the ingredients and smoking point of fats and oils to determine the suitability of ingredients. Further, the KG also consists of causes that leads to the effect of carcinogen productions (eg: grillin + pork --> polyaromatic hydrocarbons). Each of the following KGs can be used individually or can be integrated into one KG.
+
+#### Diabetes Reasoning Knowledge Graph

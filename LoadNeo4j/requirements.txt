@@ -1,0 +1,8 @@
+jupyterlab
+neo4j
+py2neo
+graphdatascience
+python-dotenv
+sentence-transformers
+h5py
+
