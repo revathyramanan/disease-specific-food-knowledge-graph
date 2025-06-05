@@ -23,6 +23,19 @@ Diabetes-specific Food Groups and example items were compiled from MayoClinic an
 | **Ultra Processed**      | Hot dogs, Fried fish sticks, Fast food burgers                                                     |
 | **Deep Fried**           | Potato fries, Chicken nuggets, and ingredients with keyword "deep fry"                             |
 
+<br>
+The Diabetes Reasoning Knowledge Graph looks as follows where diabetes dietary classification of ingredient Pork from USFDA database is shown
+
+<div style="text-align: center; margin-bottom: 20px;">
+  <figure style='display: table'>
+  <img src='Figures/diabetes_reasoning.png'>
+  <p>
+  </p>
+</figure>
+</div>
+
+<br>
+<br>
 
 ### Cooking Taxonomy
 Cooking methods significantly impact the nutrition of food. For instance, boiling reduces Vitamin C by up to 70%, deep frying introduces trans fats, which should be avoided for diabetes, and grilling meat produces carcinogenic compounds. Additionally, poultry must be cooked at specific temperatures to ensure safety, as heat kills pathogens.
@@ -30,14 +43,52 @@ Cooking methods significantly impact the nutrition of food. For instance, boilin
 To account for nutritional modifications, cooking methods and descriptions were gathered from Wikidata. A taxonomical classification was created based on cooking method types. Each method is classified as heat, mechanical, or chemical, with heat-based methods further divided into dry heat, liquid-based, and fat-based. Liquid is further split into water, milk, and other, while fat-based is divided into small, medium, and high fat. For example, deep frying falls under Heat $\rightarrow$ Fat-based $\rightarrow$ High fat $\rightarrow$ Deep frying, which can be substituted by a method like sautéing (small fat). Substitutions must be within the same cooking type (e.g., boiling cannot replace deep frying).
 
 
+
+<br>
+<br>
+
+
 ### Carcinogen Causal Knowledge Graph
 Carcinogenic compounds, such as polycyclic aromatic hydrocarbons (PAHs), heterocyclic amines (HCAs), and advanced glycation end products (AGEs), can be produced during cooking at high temperatures. PAHs are formed when fat and juices from meat drip onto hot surfaces, causing smoke that contains these harmful compounds to adhere to the food. HCAs are generated when meat is cooked at high temperatures, especially through grilling or frying, leading to chemical reactions between amino acids and creatine in muscle tissue. AGEs are produced when food is exposed to heat, particularly in dry-heat cooking methods like roasting or frying, where sugars and proteins react to form these toxic compounds. These compounds are linked to increased cancer risk and other chronic health issues. Therefore, the ingredients and cooking methods responsible for carcinogen formation are identified and integrated into DFKG.
+
+<div style="text-align: center; margin-bottom: 20px;">
+  <figure style='display: table'>
+  <img src='Figures/carcinogen.png'>
+  <p> Carcinogen Causal Knowledge Graph that captures the formation of carcinogens when certain cooking methods interact with certain ingredients. A sample of additional information stored as properties is also displayed
+  </p>
+</figure>
+</div>
+
+<br>
+<br>
 
 ### Smoking Point
 Heating fats and oils beyond its designated smoking points can produce free radicals which are toxic compounds. Frequent consumption can lead to health concerns and therefore smoking points of fats and oils are also added to the knowledge base as shown in Figure below. 
 
+<div style="text-align: center; margin-bottom: 20px;">
+  <figure style='display: table'>
+  <img src='Figures/smoke_point.png'>
+  <p> Smoking point of ingredients categories as no heat, no-low heat, medium heat, medium-high heat and high heat while preserving the actual smoke point with source information
+  </p>
+</figure>
+</div>
+
+<br>
+<br>
+
 ### Glycemic Index
 The Glycemic Index (GI) measures how quickly carbohydrate-containing foods raise blood glucose levels. Foods with a high GI cause rapid spikes in blood sugar, which can be problematic for individuals with diabetes, as they struggle to regulate blood glucose levels. A lower GI diet, which includes foods that raise blood sugar more gradually, is often recommended for people with diabetes to help manage blood sugar levels and reduce the risk of complications. Choosing low-GI foods, such as whole grains, legumes, and non-starchy vegetables, can be beneficial for maintaining better glucose control. The Glycemic Index Database from the Sydney University Glycemic Index Research Service was collected with 4270 ingredients along with Glycemic Load (GL). Based on the GI value, they are classified as high (above 70), medium (56 to 69) or low (1 to 55) as per the guidelines from MayoClinic  and a graph is constructed as shown in Figure below.
+
+<div style="text-align: center; margin-bottom: 20px;">
+  <figure style='display: table'>
+  <img src='Figures/GI.png'>
+  <p> Mapping of ingredients from Glycemic index database to USFDA database
+  </p>
+</figure>
+</div>
+
+<br>
+<br>
 
 ### Steps to Run
 All the above mentioned knowledge graphs are integrated into one big knowledge graph named Disease-specific Food Knowledge Graph. To stand up this KG, please follow the steps below:
