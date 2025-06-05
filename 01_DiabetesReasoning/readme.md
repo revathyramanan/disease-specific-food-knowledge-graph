@@ -23,4 +23,5 @@ cd scripts_recommend
 for file in ./*.py; do python "$file"; done
 
 ```
-* An intermediatory set of json files will now be generated with reasons and stored under the `result_data` folder. This is then be further converted to csv format that allows batch loading of data into Neo4j. The details are in `Neo4jScripts` folder. If you want to load just this KG, you can move to `Neo4jScripts` folder. Else, process all the other sources of knowledge and then move to `Neo4jScripts` folder
+* An intermediatory set of json files will now be generated with reasons and stored under the `result_data` folder.
+* Now execute `python neo4j_nodes_rels.py` to convert json to csv that enables batch loading of data into neo4j
